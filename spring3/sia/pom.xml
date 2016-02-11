@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <modelVersion>4.0.0</modelVersion>
+  
+	<parent>
+		<artifactId>spring3</artifactId>
+		<groupId>demo.spring3</groupId>
+		<version>1.0</version>
+	</parent>	
+	
+	<artifactId>sia</artifactId>
+	<packaging>pom</packaging>
+	<name>spring in action 3rd</name>
+  <url>http://www.manning.com/walls4</url>
+
+  <properties>
+      <spring.group>org.springframework</spring.group>
+      <!-- <spring.version>3.0.2.RELEASE</spring.version>-->
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+
+
+
+  <groupId>demo.spring3.sia</groupId>
+  <modules>
+  	<module>springidol</module>
+  </modules>
+</project>

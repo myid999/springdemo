@@ -1,20 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>demo.spring</groupId>
-	<artifactId>springdemo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+
+
+	<parent>
+		<artifactId>springdemo</artifactId>
+		<groupId>demo.spring</groupId>
+		<version>1.0</version>
+	</parent>	
+	
+	<artifactId>spring3</artifactId>
 	<packaging>pom</packaging>
-	<name>springdemo</name>
+	<name>spring 3 demo</name>
+
 
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.2.4.RELEASE</spring.version>
+		<spring.version>3.2.16.RELEASE</spring.version>
 
 	</properties>
 
-	<dependencies>
+
+<!-- 	<dependencies>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -23,20 +31,12 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
 
-
-
-	</dependencies>
+	</dependencies> -->
 
 	<build>
 		<finalName>${artifactId}</finalName>
-		<plugins>
+		<!-- <plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -74,11 +74,15 @@
 					</excludes>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins> -->
 	</build>
 
 
 
 
 
+	<groupId>demo.spring3</groupId>
+	<modules>
+		<module>sia</module>
+	</modules>
 </project>
