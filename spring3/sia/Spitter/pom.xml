@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <parent>
+    <groupId>demo.spring3.sia</groupId>
+    <artifactId>sia</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>Spitter</artifactId>
+  <packaging>pom</packaging>
+  
+  <name>Spring in Action Spitter</name>
+  <url>http://www.manning.com/walls4</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>${spring.group}</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${spring.group}</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${spring.group}</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.6</version>
+      <scope>test</scope>
+    </dependency>
+    
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.2.143</version>
+			<scope>test</scope>
+		</dependency>    
+    
+  </dependencies>
+  <properties>
+  	<jodaVersion>1.6.2</jodaVersion>
+  	<jacksonVersion>1.5.3</jacksonVersion>
+  	<commonsHttpClientVersion>3.1</commonsHttpClientVersion>
+  	<mockitoVersion>1.8.5</mockitoVersion>
+  	<s2OAuthVersion>1.0.0.M1</s2OAuthVersion>
+  	<scribeVersion>1.0.8</scribeVersion>
+  	<servletApiVersion>2.5</servletApiVersion>
+  </properties>
+</project>

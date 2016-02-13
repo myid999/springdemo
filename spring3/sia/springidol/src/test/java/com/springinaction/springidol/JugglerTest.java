@@ -61,5 +61,15 @@ public class JugglerTest {
 		aPerformer.perform();
 	
 	}
+	
+	@Test
+	public void testSingleton() throws PerformanceException {
+		
+		Performer aPerformer = (Performer) ctx.getBean("duke");
+		Performer aPerformerdd = (Performer) ctx.getBean("dukedd");
+		System.out.println(aPerformer);
+		System.out.println(aPerformerdd);
+	
+	}
 
 }

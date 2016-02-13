@@ -40,5 +40,12 @@
   <groupId>demo.spring3.sia</groupId>
   <modules>
   	<module>springidol</module>
+  	<module>springidol-annotation</module>
+  	<module>springidol-qualifiers</module>
+  	<module>springidol-aop</module>
+  	<module>springidol-aspectj</module>
+  	<module>springidol-atinject</module>
+  	<module>springidol-autodiscovery</module>
+  	<module>springidol-javaconfig</module>
   </modules>
 </project>

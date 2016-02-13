@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<parent>
+		<groupId>demo.spring3.sia</groupId>
+		<artifactId>Spitter</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>spitter-persistence-hibernate-template</artifactId>
+	<packaging>jar</packaging>
+
+	<name>Spring in Action Spitter</name>
+	<url>http://www.manning.com/walls4</url>
+
+	<dependencies>
+
+	<dependency>
+		<groupId>demo.spring3.sia</groupId>
+		<artifactId>spitter-domain-plain</artifactId>
+		<version>1.0</version>
+	</dependency>
+	<dependency>
+		<groupId>demo.spring3.sia</groupId>
+		<artifactId>spitter-persistence-common</artifactId>
+		<version>1.0</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>3.3.2.GA</version>
+	</dependency>
+	<dependency>
+		<groupId>javassist</groupId>
+		<artifactId>javassist</artifactId>
+		<version>3.9.0.GA</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.6.1</version>
+		<scope>test</scope>
+	</dependency>
+
+	
+	
+	
+	</dependencies>
+</project>

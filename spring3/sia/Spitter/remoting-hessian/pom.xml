@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<parent>
+		<groupId>demo.spring3.sia</groupId>
+		<artifactId>Spitter</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>remoting-hessian</artifactId>
+	<packaging>jar</packaging>
+
+	<name>Spring in Action Spitter</name>
+	<url>http://www.manning.com/walls4</url>
+
+	<dependencies>
+      
+	</dependencies>
+</project>
