@@ -17,6 +17,10 @@
 	<url>http://www.manning.com/walls4</url>
 
 	<dependencies>
-      
+		<dependency>
+				<groupId>demo.spring3.sia</groupId>
+				<artifactId>spitter-domain-jpa</artifactId>
+				<version>1.0</version>
+			</dependency>
 	</dependencies>
 </project>

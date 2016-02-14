@@ -17,6 +17,190 @@
 	<url>http://www.manning.com/walls4</url>
 
 	<dependencies>
-      
+		<dependency>
+			<groupId>demo.spring3.sia</groupId>
+			<artifactId>spitter-domain-jpa</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>demo.spring3.sia</groupId>
+			<artifactId>spitter-jmx</artifactId>
+			<version>1.0</version>
+		</dependency>		
+		<dependency>
+			<groupId>demo.spring3.sia</groupId>
+			<artifactId>spitter-persistence-common</artifactId>
+			<version>1.0</version>
+		</dependency>		
+		<dependency>
+			<groupId>demo.spring3.sia</groupId>
+			<artifactId>spitter-persistence-jpa</artifactId>
+			<version>1.0</version>
+		</dependency>		
+		<dependency>
+			<groupId>demo.spring3.sia</groupId>
+			<artifactId>spitter-service-annotation-tx</artifactId>
+			<version>1.0</version>
+		</dependency>		
+		
+		
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-core</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>	
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>		
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>		
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-taglibs</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>		
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-ldap</artifactId>
+		<version>${spring.security.version}</version>
+	</dependency>		
+	
+	<dependency>
+		<groupId>rome</groupId>
+		<artifactId>rome</artifactId>
+		<version>0.9</version>
+	</dependency>		
+	<dependency>
+		<groupId>net.java.dev.jets3t</groupId>
+		<artifactId>jets3t</artifactId>
+		<version>0.7.4</version>
+	</dependency>			
+	<dependency>
+		<groupId>commons-fileupload</groupId>
+		<artifactId>commons-fileupload</artifactId>
+		<version>1.2.1</version>
+	</dependency>		
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>4.0.2.GA</version>
+	</dependency>	
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-core</artifactId>
+		<version>2.2.2</version>
+	</dependency>	
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-jsp</artifactId>
+		<version>2.2.2</version>
+	</dependency>	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>servlet-api</artifactId>
+		<version>2.5</version>
+	</dependency>	
+
+<dependency>
+	<groupId>javax.servlet.jsp.jstl</groupId>
+	<artifactId>jstl</artifactId>
+	<version>1.2</version>
+</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.5.8</version>
+	</dependency>	
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-nop</artifactId>
+		<version>1.5.8</version>
+	</dependency>	
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.2.143</version>
+		</dependency>  
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-core</artifactId>
+			<version>1.5.5</version>
+		</dependency> 
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-server-jndi</artifactId>
+			<version>1.5.5</version>
+		</dependency> 			
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.1</version>
+    </dependency>
+			
 	</dependencies>
+	
+	<build>
+		<finalName>${artifactId}</finalName>
+ 		<plugins>
+<!-- 			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin> -->
+ 		<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+      </plugin>			
+		<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.16.v20140903</version>
+				<configuration>
+					<stopKey>CTRL+C</stopKey>
+					<stopPort>8999</stopPort>
+<!-- 					<systemProperties>
+						<systemProperty>
+							<name>xwork.loggerFactory</name>
+							<value>com.opensymphony.xwork2.util.logging.log4j2.Log4j2LoggerFactory</value>
+						</systemProperty>
+					</systemProperties> -->
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webAppSourceDirectory>${basedir}/src/main/webapp/</webAppSourceDirectory>
+					<webAppConfig>
+						<contextPath>/spitter-web</contextPath>
+						<descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
+					</webAppConfig>
+				</configuration>
+			</plugin>
+<!-- 			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>it/**</exclude>
+						<exclude>**/*$*</exclude>
+					</excludes>
+				</configuration>
+			</plugin>  -->
+		</plugins>
+	</build>	
+	
+	<properties>
+		<spring.security.version>3.0.3.RELEASE</spring.security.version>
+	</properties>
 </project>
+
+
+

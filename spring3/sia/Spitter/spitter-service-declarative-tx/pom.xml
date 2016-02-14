@@ -17,6 +17,31 @@
 	<url>http://www.manning.com/walls4</url>
 
 	<dependencies>
-      
+		<dependency>
+			<groupId>demo.spring3.sia</groupId>
+			<artifactId>spitter-domain-jpa</artifactId>
+			<version>1.0</version>
+		</dependency>
+	<dependency>
+		<groupId>demo.spring3.sia</groupId>
+		<artifactId>spitter-persistence-common</artifactId>
+		<version>1.0</version>
+	</dependency>		
+	<dependency>
+		<groupId>demo.spring3.sia</groupId>
+		<artifactId>spitter-service-common</artifactId>
+		<version>1.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+		<groupId>org.easymock</groupId>
+		<artifactId>easymock</artifactId>
+		<version>3.0</version>
+	</dependency>		
+
 	</dependencies>
 </project>

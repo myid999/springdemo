@@ -45,7 +45,7 @@
 	</dependency>
 	<dependency>
 		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
+		<artifactId>slf4j-nop</artifactId>
 		<version>1.5.8</version>
 	</dependency>	
 	<dependency>

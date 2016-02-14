@@ -47,5 +47,7 @@
   	<module>springidol-atinject</module>
   	<module>springidol-autodiscovery</module>
   	<module>springidol-javaconfig</module>
+  	<module>SpringPizza</module>
+  	<module>Spitter</module>
   </modules>
 </project>
