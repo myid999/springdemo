@@ -183,6 +183,17 @@
 						<contextPath>/spitter-web</contextPath>
 						<descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
 					</webAppConfig>
+			           <connectors>
+			                <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+			                    <port>8080</port>
+			                </connector>
+<!-- 			                <connector implementation="org.eclipse.jetty.server.ssl.SslSocketConnector">
+			                    <port>8443</port>
+			                    <keystore>jetty-ssl.keystore</keystore>
+			                    <keyPassword>password</keyPassword>
+			                    <password>password</password>
+			                </connector> -->
+			            </connectors>					
 				</configuration>
 			</plugin>
 <!-- 			<plugin>

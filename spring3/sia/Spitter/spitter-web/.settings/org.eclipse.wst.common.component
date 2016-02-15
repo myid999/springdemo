@@ -5,6 +5,24 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="spitter-domain-jpa-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spitter-domain-jpa/spitter-domain-jpa">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spitter-jmx-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spitter-jmx/spitter-jmx">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spitter-persistence-common-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spitter-persistence-common/spitter-persistence-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spitter-persistence-jpa-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spitter-persistence-jpa/spitter-persistence-jpa">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spitter-service-annotation-tx-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spitter-service-annotation-tx/spitter-service-annotation-tx">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spitter-service-common-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spitter-service-common/spitter-service-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="spitter-web"/>
         <property name="java-output-path" value="/spitter-web/target/classes"/>
     </wb-module>
