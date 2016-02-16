@@ -5,7 +5,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class RmiMain {
   public static void main(String[] args) {
-    ApplicationContext context = new ClassPathXmlApplicationContext("remote-service-context-2.xml");
+	  
+	 String [] configFiles= new String[]{ 
+			 "remote-service-context-2.xml",
+			 "remote-service-context.xml",
+			    "service-context.xml",
+			    "persistence-context.xml",
+			    "dataSource-context.xml"};
+	 
+	  
+    ApplicationContext context = new ClassPathXmlApplicationContext(configFiles);
     
   }
 }
