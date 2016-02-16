@@ -5,8 +5,7 @@
  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-  <bean class=
-      "org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"
+  <bean class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"
     p:service-ref="spitterService"
     p:serviceInterface="com.habuma.spitter.service.SpitterService" />
 

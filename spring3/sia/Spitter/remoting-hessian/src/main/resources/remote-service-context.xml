@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:p="http://www.springframework.org/schema/p"
- xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-  <bean id="hessianSpitterService"
-      class="org.springframework.remoting.caucho.HessianServiceExporter"
+	<bean id="hessianSpitterService"
+		class="org.springframework.remoting.caucho.HessianServiceExporter"
+		p:service-ref="spitterService" p:serviceInterface="com.habuma.spitter.service.SpitterService" />
+
+	<bean id="burlapSpitterService"
+		class="org.springframework.remoting.caucho.BurlapServiceExporter"
+		p:service-ref="spitterService" p:serviceInterface="com.habuma.spitter.service.SpitterService" />
+
+  <bean id="httpInvokerSpitterService"
+  	class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"
     p:service-ref="spitterService"
     p:serviceInterface="com.habuma.spitter.service.SpitterService" />
 
-  <bean id="burlapSpitterService"
-      class="org.springframework.remoting.caucho.BurlapServiceExporter"
-    p:service-ref="spitterService"
-    p:serviceInterface="com.habuma.spitter.service.SpitterService" />
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+			/hessianSpitter.service=hessianSpitterService
+			/burlapSpitter.service=burlapSpitterService
+			/httpInvokerSpitter.service=httpInvokerSpitterService
+			</value>
+		</property>
+	</bean>
 
 </beans>

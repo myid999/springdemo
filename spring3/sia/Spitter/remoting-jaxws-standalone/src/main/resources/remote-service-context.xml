@@ -2,9 +2,21 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:p="http://www.springframework.org/schema/p"
- xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-  <bean class=
-    "org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter"/>
+  <!-- <bean class="org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter"/> -->
+
+ <bean class="org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter"
+		p:baseAddress="http://localhost:8088/services/" />
+
+<context:component-scan base-package="com.habuma.spitter.remoting.jaxws" />
+
 
 </beans>
+
+
+
+
+
