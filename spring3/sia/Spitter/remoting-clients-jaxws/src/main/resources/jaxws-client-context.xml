@@ -9,6 +9,6 @@
     p:serviceName="SpitterService"
     p:portName="SpitterServiceEndpointPort"      
     p:serviceInterface="com.habuma.spitter.service.SpitterService"
-    p:namespaceUri="http://jaxws.remoting.spitter.habuma.com/"/>      
+    p:namespaceUri="http://jaxws.remoting.spitter.habuma.com/"></bean>      
 
 </beans>

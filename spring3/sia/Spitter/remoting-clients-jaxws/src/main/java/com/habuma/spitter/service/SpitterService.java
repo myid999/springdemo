@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import com.habuma.spitter.domain.Spitter;
 import com.habuma.spitter.domain.Spittle;
 
-@Component
+
 @WebService(serviceName = "SpitterService")
 public interface SpitterService {
 /*	List<Spittle> getRecentSpittles(int count);
