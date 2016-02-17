@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import com.habuma.spitter.domain.Spitter;
 
 @Controller
-@RequestMapping(value="/things")
+@RequestMapping(value = "/things")
 public class ThingController {
-  @RequestMapping(method=RequestMethod.POST)
-  @ResponseStatus(HttpStatus.CREATED)
-  public @ResponseBody Spitter createThing(@RequestBody Spitter spitter, HttpServletResponse response) {
-    System.out.println("GOT A SPITTER:  " + spitter.getUsername());
-    response.setHeader("Location", "http://www.habuma.com/foo/bar");
-    return spitter;
-  }
+	@RequestMapping(method = RequestMethod.POST)
+	@ResponseStatus(HttpStatus.CREATED)
+	public @ResponseBody Spitter createThing(@RequestBody Spitter spitter, HttpServletResponse response) {
+		System.out.println("GOT A SPITTER:  " + spitter.getUsername());
+		response.setHeader("Location", "http://www.habuma.com/foo/bar");
+		return spitter;
+	}
 }

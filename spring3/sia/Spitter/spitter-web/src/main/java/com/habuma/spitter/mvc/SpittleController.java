@@ -48,11 +48,8 @@ public class SpittleController {
 		return "redirect:/";
 	}
 
-	// <start id="method_addNewSpittle"/>
 	@RequestMapping(method = RequestMethod.POST)
-	// <co id="co_handlePOST"/>
 	@ResponseStatus(HttpStatus.CREATED)
-	// <co id="co_createdResponse" />
 	public @ResponseBody Spittle createSpittle(@Valid Spittle spittle, BindingResult result, HttpServletResponse response) throws BindException {
 		if (result.hasErrors()) {
 			throw new BindException(result);
